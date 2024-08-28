@@ -47,7 +47,12 @@ Classe que gerencia as solicitações dos livros.
 - **Métodos:**
   - `solicitar_livro(usuario, livro)`: Adiciona um pedido a lista.
  
+#### `BibliotecaApp`
+É a classe da interface gráfica do App da bibliioteca.
 
+- **Atributos:**
+  - `root`: Raiz da interface gráfica.
+  - `biblioteca`: Instância da classe `Biblioteca`.
 
 
 
