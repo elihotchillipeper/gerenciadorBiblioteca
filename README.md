@@ -46,8 +46,9 @@ Classe que gerencia as solicitações dos livros.
  
 - **Métodos:**
   - `solicitar_livro(usuario, livro)`: Adiciona um pedido a lista.
- 
 
+
+ 
 ## Funcionalidades
 
 ### 1. Definição das Classes
@@ -72,24 +73,26 @@ A interface gráfica é gerenciada pela classe BibliotecaApp, que configura a te
 
   - `__init__`: Configura a interface inicial com um frame principal (main_frame) e botões para navegar para diferentes partes da aplicação.
 
-cadastro_livro:
+- `cadastro_livro`:
+  - Oculta a tela principal e exibe uma nova para o cadastro de livros.
+  - Permite que o usuário insira o título, autor e ISBN do livro.
+  - O botão "Salvar" cria um novo objeto Livro, adiciona-o à biblioteca e retorna a tela principal.
+  - O botão "Voltar" retorna ao frame principal sem salvar.
 
-Oculta o frame principal e exibe um novo frame para o cadastro de livros.
-Permite que o usuário insira o título, autor e ISBN do livro.
-O botão "Salvar" cria um novo objeto Livro, adiciona-o à biblioteca e retorna ao frame principal.
-O botão "Voltar" retorna ao frame principal sem salvar.
-cadastro_usuario:
+- `cadastro_usuario`:
 
-Oculta o frame principal e exibe um novo frame para o cadastro de usuários.
-Permite que o usuário insira o nome e a matrícula.
-O botão "Salvar" cria um novo objeto Usuario, adiciona-o à biblioteca e retorna ao frame principal.
-O botão "Voltar" retorna ao frame principal sem salvar.
-visualizar_livros:
+  - Oculta a tela principal e exibe uma nova para o cadastro de usuários.
+  - Permite que o usuário insira o nome e a matrícula.
+  - O botão "Salvar" cria um novo objeto Usuario, adiciona-o à biblioteca e retorna a tela principal.
+  - O botão "Voltar" retorna a tela principal sem salvar.
 
-Oculta o frame principal e exibe um novo frame com uma lista de todos os livros cadastrados.
-Cada livro é exibido com seu título, autor e ISBN.
-O botão "Voltar" retorna ao frame principal.
-visualizar_usuarios:
+- `visualizar_livros`:
+
+  - Oculta o frame principal e exibe um novo frame com uma lista de todos os livros cadastrados.
+  - Cada livro é exibido com seu título, autor e ISBN.
+  - O botão "Voltar" retorna ao frame principal.
+
+- `visualizar_usuarios`:
 
 Oculta o frame principal e exibe um novo frame com uma lista de todos os usuários cadastrados.
 Cada usuário é exibido com seu nome e matrícula.
