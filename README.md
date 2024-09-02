@@ -204,6 +204,95 @@ A interface gráfica é gerenciada pela classe BibliotecaApp, que configura a te
 ### Encerramento
   - O loop principal do Tkinter (root.mainloop()) continua rodando até que o usuário feche a janela principal. A interface gráfica responde a ações do usuário, atualizando a tela conforme os métodos são chamados.
 
+## Manual de Instalação e Uso
+
+### Dependências
+
+Para executar o programa, você precisará das seguintes dependências:
+
+  - `tkinter`: Biblioteca para a criação da interface gráfica.
+  - 
+### Instalação
+O tkinter geralmente já está incluído com a instalação padrão do Python. No entanto, caso precise instalar ou atualizar o tkinter, siga as instruções abaixo:
+
+- Verifique se o tkinter já está instalado:
+
+  - Abra um terminal ou prompt de comando e execute o seguinte comando para verificar se o tkinter está disponível:
+    - python -m tkinter
+
+### Instalação do tkinter no Windows e Linux:
+
+- **Windows:** Normalmente não é necessário instalar separadamente. Certifique-se de que o Python foi instalado corretamente.
+- **Ubuntu/Debian:**
+    - sudo apt-get install python3-tk
+
+### Inicialização
+Para iniciar o programa, siga os passos abaixo:
+
+- Salve o código fornecido em um arquivo chamado gerenciadorBiblioteca_app.py.
+
+- Abra um terminal e navegue até o diretório onde o arquivo gerenciadorBiblioteca_app.py está localizado.
+
+- Execute o programa com o seguinte comando:
+    - python gerenciadorBiblioteca_app.py
+
+### Uso
+Aqui está um guia para utilizar o programa:
+
+#### Tela Inicial:
+
+- Após iniciar o programa, você verá uma tela inicial com quatro botões:
+
+  - Cadastrar Livro
+  - Cadastrar Usuário
+  - Visualizar Livros
+  - Visualizar Usuários
+
+#### Cadastrar Livro:
+
+- Clique no botão "Cadastrar Livro".
+- Preencha os campos Título, Autor, e ISBN.
+- Clique no botão "Salvar" para adicionar o livro à biblioteca.
+- Clique em "Voltar" para retornar à tela inicial.
+
+#### Cadastrar Usuário:
+
+- Clique no botão "Cadastrar Usuário".
+- Preencha os campos Nome e Matrícula.
+- Clique no botão "Salvar" para adicionar o usuário à biblioteca.
+- Clique em "Voltar" para retornar à tela inicial.
+
+#### Visualizar Livros:
+
+- Clique no botão "Visualizar Livros".
+- Você verá uma lista de todos os livros cadastrados, com suas informações.
+- Clique em "Voltar" para retornar à tela inicial.
+
+#### Visualizar Usuários:
+
+- Clique no botão "Visualizar Usuários".
+- Você verá uma lista de todos os usuários cadastrados, com suas informações.
+- Clique em "Voltar" para retornar à tela inicial.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
