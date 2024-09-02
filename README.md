@@ -94,24 +94,116 @@ A interface gráfica é gerenciada pela classe BibliotecaApp, que configura a te
 
 - `visualizar_usuarios`:
 
-Oculta o frame principal e exibe um novo frame com uma lista de todos os usuários cadastrados.
-Cada usuário é exibido com seu nome e matrícula.
-O botão "Voltar" retorna ao frame principal.
-voltar:
+  - Oculta o frame principal e exibe um novo frame com uma lista de todos os usuários cadastrados.
+  - Cada usuário é exibido com seu nome e matrícula.
+  - O botão "Voltar" retorna ao frame principal.
 
-Método auxiliar para retornar ao frame principal a partir de qualquer tela secundária.
+- `voltar`:
+
+- Método para retornar a tela principal a partir de qualquer outra tela.
+
+## Roadmap de Execução
+
+### Inicialização do Programa
+
+- O script é executado diretamente (if __name__ == "__main__":).
+
+- Criação da tela Principal:
+
+  - `root`: tk.Tk(): Cria uma instância da janela principal do Tkinter.
+  - `app`: BibliotecaApp(root): Cria uma instância da classe BibliotecaApp, passando a janela principal (root) como argumento.
+  - `root.mainloop()`: Inicia o loop principal da interface gráfica do Tkinter, aguardando interações do usuário.
+
+### Inicialização da Interface Gráfica
+
+- Construtor da Classe BibliotecaApp
+
+  - `self.root = root`: Armazena a referência à janela principal.
+  - `self.biblioteca = Biblioteca()`: Cria uma instância da classe Biblioteca, que gerencia livros e usuários.
+  - `self.main_frame = tk.Frame(root)`: Cria um Frame principal que serve como container para outros widgets.
+  - `self.main_frame.pack()`: Adiciona o Frame principal à janela.
+    
+### Criação dos Botões Principais
+- Cadastrar Livro
+  - `self.cadastro_livro_button = tk.Button(self.main_frame, text="Cadastrar Livro", command=self.cadastro_livro)`: Cria um botão para cadastro de livros, que chama o método cadastro_livro quando clicado.
+  - `self.cadastro_livro_button.pack()`: Adiciona o botão ao main_frame.
+
+- Cadastrar Usuário
+
+  - `self.cadastro_usuario_button = tk.Button(self.main_frame, text="Cadastrar Usuário", command=self.cadastro_usuario)`: Cria um botão para cadastro de usuários, que chama o método cadastro_usuario quando clicado.
+  - `self.cadastro_usuario_button.pack()`: Adiciona o botão ao main_frame.
+
+- Visualizar Livros
+  - `self.visualizar_livros_button = tk.Button(self.main_frame, text="Visualizar Livros", command=self.visualizar_livros)`: Cria um botão para visualizar livros, que chama o método visualizar_livros quando clicado.
+  - `self.visualizar_livros_button.pack()`: Adiciona o botão ao main_frame.
+
+- Visualizar Usuários
+  - `self.visualizar_usuarios_button = tk.Button(self.main_frame, text="Visualizar Usuários", command=self.visualizar_usuarios)`: Cria um botão para visualizar usuários, que chama o método visualizar_usuarios quando clicado.
+  - `self.visualizar_usuarios_button.pack()`: Adiciona o botão ao main_frame.
+
+### Interações do Usuário e Manipulação de Dados
+
+- Cadastro de Livros
+  - Ação do Usuário
+  - O usuário clica no botão "Cadastrar Livro".
+
+- Método `cadastro_livro`:
+  - `self.main_frame.pack_forget()`: Esconde o main_frame.
+  - Cria uma novo tela para cadastro de livros (cadastro_livro_frame).
+  - Adiciona campos de entrada (Título, Autor, ISBN) e botões (Salvar e Voltar) ao cadastro_livro_frame.
+
+- Método `salvar_livro`:
+  - Obtém os valores dos campos de entrada.
+  - Cria uma instância de Livro com esses valores.
+  - Adiciona o livro à biblioteca (self.biblioteca.adicionar_livro(novo_livro)).
+  - Esconde o cadastro_livro_frame e exibe o main_frame.
+
+- Método voltar:
+  - Esconde o cadastro_livro_frame e exibe o main_frame.
+  - Cadastro de Usuários
+
+- Ação do Usuário
+  - O usuário clica no botão "Cadastrar Usuário".
+  - Método cadastro_usuario
+  - self.main_frame.pack_forget(): Esconde o main_frame.
+  - Cria um novo Frame para cadastro de usuários (cadastro_usuario_frame).
+  - Adiciona campos de entrada (Nome, Matrícula) e botões (Salvar e Voltar) ao cadastro_usuario_frame.
+  - Método salvar_usuario
+  - Obtém os valores dos campos de entrada.
+  - Cria uma instância de Usuario com esses valores.
+  - Adiciona o usuário à biblioteca (self.biblioteca.adicionar_usuario(novo_usuario)).
+  - Esconde o cadastro_usuario_frame e exibe o main_frame.
+
+- Método voltar
+  - Esconde o cadastro_usuario_frame e exibe o main_frame.
+  - Visualização de Livros
+
+- Ação do Usuário
+  - O usuário clica no botão "Visualizar Livros".
+
+- Método visualizar_livros
+  - `self.main_frame.pack_forget()`: Esconde o main_frame.
+  - Cria um novo Frame para visualização de livros (visualizar_livros_frame).
+  - Adiciona labels para cada livro presente na biblioteca ao visualizar_livros_frame.
+- Método voltar
+  - Esconde o visualizar_livros_frame e exibe o main_frame.
+
+- Visualização de Usuários
+
+  - Ação do Usuário
+  - O usuário clica no botão "Visualizar Usuários".
+
+- Método `visualizar_usuarios` 
+  - `self.main_frame.pack_forget()`: Esconde o main_frame.
+  - Cria um novo Frame para visualização de usuários (visualizar_usuarios_frame).
+  - Adiciona labels para cada usuário presente na biblioteca ao visualizar_usuarios_frame.
+
+- Método voltar
+  - Esconde o visualizar_usuarios_frame e exibe o main_frame.
+
+### Encerramento
+  - O loop principal do Tkinter (root.mainloop()) continua rodando até que o usuário feche a janela principal. A interface gráfica responde a ações do usuário, atualizando a tela conforme os métodos são chamados.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-  
